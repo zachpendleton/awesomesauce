@@ -9,21 +9,22 @@ Gem::Specification.new do |s|
 
   s.required_rubygems_version = Gem::Requirement.new(">= 0") if s.respond_to? :required_rubygems_version=
   s.authors = [%q{Zach Pendleton}]
-  s.date = %q{2011-08-25}
+  s.date = %q{2011-08-26}
   s.description = %q{Rack middleware for replacing the word awesome with synonyms.}
   s.email = %q{zachpendleton@gmail.com}
   s.extra_rdoc_files = [
     "LICENSE.txt",
-    "README.rdoc"
+    "README.mdown"
   ]
   s.files = [
     ".document",
     "Gemfile",
     "Gemfile.lock",
     "LICENSE.txt",
-    "README.rdoc",
+    "README.mdown",
     "Rakefile",
     "VERSION",
+    "awesomesauce.gemspec",
     "lib/awesomesauce.rb",
     "lib/awesomesauce/filter.rb",
     "lib/awesomesauce/synonyms.rb",
@@ -37,7 +38,7 @@ Gem::Specification.new do |s|
   s.homepage = %q{http://github.com/zachpendleton/awesomesauce}
   s.licenses = [%q{MIT}]
   s.require_paths = [%q{lib}]
-  s.rubygems_version = %q{1.8.7}
+  s.rubygems_version = %q{1.8.9}
   s.summary = %q{Because variety is the awesomesauce of life.}
 
   if s.respond_to? :specification_version then
