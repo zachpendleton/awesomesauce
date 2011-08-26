@@ -1,0 +1,51 @@
+# awesomesauce
+
+Welcome to a drug named awesomesauce: a Rack middleware for replacing
+the word "awesome" with synonyms for the word "awesome."
+
+Why? Because when your life is awesome, you want to spend more time being
+awesome and less time thinking of new, creative ways to tell your friends
+just how awesome your life is.
+
+## Installation
+
+    gem install awesomesauce
+
+## Usage
+
+### Rails 3
+
+    # Gemfile
+    gem "awesomesauce"
+
+    # application.rb
+    config.middleware.use "Awesomesauce::Filter"
+
+### Sinatra
+
+    require "sinatra"
+    require "awesomesauce"
+
+    use Awesomesauce::Filter
+
+    get '/' do
+      'Hello awesome world'
+    end
+
+## Configuration
+
+Awesomesauce takes an optional array of synonyms that will be appended to
+the default set of awesome substitute words. Use as follows:
+
+    use Awesomesauce::Filter, ["bumpin", "off the chain", "ridonkulous"]
+
+## Contributing to awesomesauce
+
+Don't. If you get too close to awesomesauce, its awesomeness will literally
+melt your face like a Spinal Tap concert.
+
+## Copyright
+
+Copyright (c) 2011 Zach Pendleton. See LICENSE.txt for
+further details.
+
