@@ -7,13 +7,17 @@ module Awesomesauce
 
     def call(env)
       status, headers, response = @app.call(env)
-      body = ""
       response.each do |part|
-        body += part.gsub(/awesome/, get_synonym)
+        while part.match(/(A|a)wesome/)
+          part.sub! /(A|a)wesome[a-z]*/ do |match|
+            puts match.class
+            match[0] == "A" ? get_synonym.capitalize : get_synonym
+          end
+        end
       end
 
-      headers["Content-Length"] = body.length
-      [status, headers, body]
+      headers["Content-Length"] = response.join.length.to_s
+      [status, headers, response]
     end
 
     protected
