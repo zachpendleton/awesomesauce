@@ -10,7 +10,6 @@ module Awesomesauce
       response.each do |part|
         while part.match(/(A|a)wesome/)
           part.sub! /(A|a)wesome[a-z]*/ do |match|
-            puts match.class
             match[0] == "A" ? get_synonym.capitalize : get_synonym
           end
         end
